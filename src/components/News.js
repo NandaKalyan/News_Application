@@ -44,11 +44,11 @@ export class News extends Component {
   render() {
     return (
       <>
-        {this.state.loading && <Spinner />}
         <div className='container my-4'>
           <h2 className='text-center' style={{ marginTop: '100px' }}>
             NewsFlamingo - Top {this.capitalize(this.props.category)} Headlines ({this.props.language.toUpperCase()})
           </h2>
+          {this.state.loading && <Spinner />}
           <div className='row my-4'>
             {this.state.articles.map((element) => (
               <div className='col-12 col-sm-6 col-md-4 my-4 mx-auto' key={element.url}>
